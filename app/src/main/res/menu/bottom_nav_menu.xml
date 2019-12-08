@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bn_bookmark"
+        android:title="@string/bookmark_page"
+        android:checked="false"
+        android:icon="@drawable/ic_bookmark_black_24dp"/>
+
+    <item
+        android:id="@+id/bn_main"
+        android:checked="true"
+        android:title="@string/main_page"
+        android:icon="@drawable/ic_library_books_black_24dp" />
+
+    <item
+        android:id="@+id/bn_settins"
+        android:checked="false"
+        android:title="@string/settings_page"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+
+</menu>
