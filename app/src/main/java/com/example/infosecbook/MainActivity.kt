@@ -4,8 +4,10 @@ import android.app.SearchManager
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.Explode
 import android.view.Menu
 import android.view.MenuItem
+import android.view.Window
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*

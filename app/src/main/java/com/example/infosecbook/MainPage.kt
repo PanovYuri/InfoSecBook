@@ -1,7 +1,10 @@
 package com.example.infosecbook
 
+import android.app.ActivityOptions
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,8 +26,19 @@ class MainPage : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_main_page, container, false)
-        view.mainPage_button.setOnClickListener {
 
+        view.mainPage_button.setOnClickListener {
+            var bundle = Bundle()
+            val v: View = i_card
+            val options: ActivityOptions
+                    = ActivityOptions.makeSceneTransitionAnimation(
+                this.activity,
+                v,
+                "card_img"
+                )
+            bundle = options.toBundle()
+            val intent: Intent = Intent(this.activity, ReadBlockActivity::class.java)
+            startActivity(intent, bundle)
         }
 
         view.favorite_icon.setOnClickListener {
@@ -33,6 +47,4 @@ class MainPage : Fragment() {
         }
         return view
     }
-
-
 }
